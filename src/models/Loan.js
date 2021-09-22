@@ -1,5 +1,5 @@
 class Loan {
-  constructor(loanDate, returnDate, studentId, computerId) {
+  constructor(loanDate, returnDate, computerId, studentId) {
     if (loanDate.length >= 5) {
       this.loanDate = loanDate;
     } else {
