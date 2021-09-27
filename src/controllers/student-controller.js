@@ -27,7 +27,7 @@ module.exports = (app, bd) => {
   app.delete("/students/:id", async (req, res) => {
     try {
       const confirm = await studentContext.deleteStudent(req.params.id);
-      res.json({ Message: "estudante Deletado" });
+      res.json({ Message: "O estudante foi deletado" });
     } catch (e) {
       res.json(e);
     }
@@ -36,8 +36,8 @@ module.exports = (app, bd) => {
   app.post("/students/create", async (req, res) => {
     console.log(req.body)   
     try {
-      const {name, email, birthdate} = req.body
-      const student = new Student(name, email, birthdate)
+      const {name, email, birthDate} = req.body
+      const student = new Student(name, email, birthDate)
       const values = [student.name, student.email, student.birthDate]             
       const created = await studentContext.createStudent(values, student);
       res.json(created);
@@ -52,7 +52,7 @@ module.exports = (app, bd) => {
         let id = req.params.id
         let {name, email, birthdate} = req.body
         let updated = await studentContext.updateStudent(name, email, birthdate, id)
-        res.json(updated)
+        res.json({Message:"Os dados foram atualizados"})
       }catch(e){
         res.json({error:e.message})     
       }

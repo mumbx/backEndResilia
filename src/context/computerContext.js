@@ -38,7 +38,7 @@ class ComputerContext {
         if (err) {
           reject(err);
         } else {
-          resolve({ Message: "Computador Deletado" });
+          resolve({ Message: "O equipamento foi deletado" });
         }
       });
     });
@@ -68,7 +68,7 @@ class ComputerContext {
         if (err) {
           reject(err);
         } else {
-          resolve({ Message: "O computador foi atualizado" });
+          resolve({ Message: "O equipamento foi atualizado" });
         }
       });
     });
