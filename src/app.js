@@ -5,7 +5,7 @@ const students = require('./controllers/student-controller')
 const computers = require('./controllers/computer-controller')
 const loans = require('./controllers/loan-controller')
 const app = express()
-
+const porta = process.env.PORT||3005
 app.use(cors())
 app.use(express.json())
 
@@ -19,6 +19,6 @@ app.get('/', (req, res)=>{
 
 })
 
-app.listen(process.env.PORT||porta, ()=>{
-    console.log('Estou te escutando na porta 3000')
+app.listen(porta, ()=>{
+    console.log('Estou te escutando na porta ' + porta)
 })
