@@ -19,6 +19,6 @@ app.get('/', (req, res)=>{
 
 })
 
-app.listen(3005, ()=>{
+app.listen(process.env.PORT||porta, ()=>{
     console.log('Estou te escutando na porta 3000')
 })
