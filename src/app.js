@@ -14,11 +14,6 @@ students(app, bd)
 computers(app, bd)
 loans(app, bd)
 
-app.get('/', (req, res)=>{
-    res.send('<h1>hello world')
-
-})
-
 app.listen(porta, ()=>{
     console.log('Estou te escutando na porta ' + porta)
 })
