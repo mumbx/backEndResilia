@@ -22,6 +22,12 @@ Após baixar os programas necessários, clone o repositório executando comando 
    $ git clone https://github.com/mumbx/BackEndResilia
 ```
 
+- Após clonar o projeto, execute o comando abaixo, na raiz do projeto.
+
+```git
+   $ npm install
+```
+
 - Para criar o banco de dados é necessário executar o arquivo mostrado abaixo
 
 ![estrutura](https://i.ibb.co/9ZqBd40/basico.jpg)
